@@ -48,7 +48,6 @@ def calcular_mediana_variables(df):
     if df.empty:
         return None
     
-    # Usar los nombres EXACTOS de tus columnas
     variables = {
         'PH': 'PH AGUA:SUELO 2,5:1,0',
         'FOSFORO': 'FÓSFORO (P) BRAY II MG/KG', 
@@ -65,4 +64,5 @@ def calcular_mediana_variables(df):
         else:
             medianas[var_nombre] = None
     
+
     return medianas
