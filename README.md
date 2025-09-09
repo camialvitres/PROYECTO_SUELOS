@@ -43,7 +43,6 @@ cd proyecto-suelos
 2. **Instalar dependencias**
 ```bash
 pip install -r requirements.txt
-Colocar el archivo de datos
 ```
 
 ## Uso
