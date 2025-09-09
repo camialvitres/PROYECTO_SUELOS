@@ -41,10 +41,16 @@ def filtrar_datos(df, departamento, municipio, cultivo, limite):
         print(f"Error al filtrar datos: {e}")
         return pd.DataFrame()
 
+"""
+    FUNCIÓN: calcular_mediana_variables
+    PROPÓSITO: Calcular medidas estadísticas de medianas para variables edáficas principales
+    PARÁMETROS:
+        df (DataFrame): Dataset con registros de análisis de suelos a analizar
+    RETORNO:
+        dict: Diccionario con medianas calculadas en formato {'PH': valor, 'FOSFORO': valor, 'POTASIO': valor}
+        None: Si el DataFrame está vacío o no se pueden calcular las medianas
+"""
 def calcular_mediana_variables(df):
-    """
-    Calcula la mediana de las variables edáficas
-    """
     if df.empty:
         return None
     
@@ -66,3 +72,4 @@ def calcular_mediana_variables(df):
     
 
     return medianas
+
