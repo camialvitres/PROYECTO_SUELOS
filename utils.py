@@ -19,13 +19,14 @@ def validar_datos(df):
     
     for col in columnas_requeridas:
         if col not in df.columns:
-            print(f"❌ Columna faltante: {col}")
+            print(f" Columna faltante: {col}")
             return False
     
     variables_presentes = [col for col in columnas_variables if col in df.columns]
     if len(variables_presentes) == 0:
-        print("❌ No se encontraron las variables edáficas (PH, Fósforo, Potasio)")
+        print(" No se encontraron las variables edáficas (PH, Fósforo, Potasio)")
         return False
     
     return True
+
 
