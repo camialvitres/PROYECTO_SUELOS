@@ -29,24 +29,3 @@ def validar_datos(df):
     
     return True
 
-
-"""
-    FUNCIÓN: obtener_cultivos_disponibles
-    PROPÓSITO: Obtener lista de cultivos disponibles para un departamento y municipio específicos
-    PARÁMETROS:
-        df (DataFrame): Dataset completo de análisis de suelos
-        departamento (str): Nombre del departamento a consultar
-        municipio (str): Nombre del municipio a consultar
-    RETORNO:
-        list: Lista ordenada de cultivos disponibles en la ubicación especificada
-        list vacía: Si no hay datos o ocurre error
-"""
-def obtener_cultivos_disponibles(df, departamento, municipio):
-    try:
-        filtro_depto = df[df['DEPARTAMENTO'].str.lower() == departamento.lower()]
-        filtro_mun = filtro_depto[filtro_depto['MUNICIPIO'].str.lower() == municipio.lower()]
-        
-        cultivos = filtro_mun['CULTIVO'].unique()
-        return sorted([cultivo for cultivo in cultivos if pd.notna(cultivo)])
-    except:
-        return []
