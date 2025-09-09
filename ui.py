@@ -45,7 +45,9 @@ def mostrar_tabla(datos, medianas):
         tuple: Tupla con (departamento, municipio, cultivo, limite) validados
 """
 def obtener_entrada_usuario():
-    print("CONSULTA DE PROPIEDADES EDÁFICAS - DEPARTAMENTO DE RISARALDA")
+    print("CONSULTA DE PROPIEDADES EDÁFICAS")
+    print("Estudiante: Camila Alvitres Cabeza")
+    print("Por favor ingresa los siguientes parámetros para filtrar los datos:")
     print("="*60)
     
     departamento = input("Departamento (ej: Risaralda): ").strip()
@@ -63,3 +65,4 @@ def obtener_entrada_usuario():
             print("Por favor ingrese un número válido.")
     
     return departamento, municipio, cultivo, limite
+
