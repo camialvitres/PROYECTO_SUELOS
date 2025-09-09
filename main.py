@@ -1,7 +1,7 @@
 import os
 from api import cargar_datos, filtrar_datos, calcular_mediana_variables
 from ui import obtener_entrada_usuario, mostrar_tabla
-from utils import validar_datos, obtener_cultivos_disponibles
+from utils import validar_datos
 
 
 """
@@ -79,4 +79,5 @@ def main():
     mostrar_tabla(datos_filtrados, medianas)
 
 if __name__ == "__main__":
+
     main()
